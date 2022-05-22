@@ -20,10 +20,10 @@ console.log(searchText);
             .catch((err)=>{
                 console.log('err: ', err);
             });
-            dispatch(addMovies(res.data));
+            dispatch(addMovies(res?.data));
         };
         
-        while(page<15) {
+        while(page<8) {
             fetchMovies();
         page=page+1;
     }

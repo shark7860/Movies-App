@@ -8,7 +8,7 @@ const MovieListing = () => {
   const [totalMovies, setTotalMovies]=useState([]);
   let movies = useSelector(getAllMovies);
   const searchText = useSelector(getMovieName);
-  let mov=movies.Search;
+  let mov=movies?.Search;
 
   useEffect(()=>{
     if(Array.isArray(mov)){
@@ -26,13 +26,13 @@ const MovieListing = () => {
  
   let renderMovies = "";
   renderMovies =
-    movies.Response === "True" ? (
+    movies?.Response === "True" ? (
       totalMovies.map((movie, index)=>{
           return <MovieCard key={index} data={movie}/>;
         })
     ) : (
       <div className="movies-error">
-        <h3>{movies.Error}</h3>
+        <h3>{movies?.Error}</h3>
       </div>
     );
   return <div className="movie-wrapper">
