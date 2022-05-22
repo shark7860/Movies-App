@@ -23,10 +23,11 @@ console.log(searchText);
             dispatch(addMovies(res.data));
         };
         
-        while(page<41) {
+        while(page<15) {
             fetchMovies();
         page=page+1;
     }
+     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [searchText]);
     
 

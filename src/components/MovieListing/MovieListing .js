@@ -14,6 +14,7 @@ const MovieListing = () => {
     if(Array.isArray(mov)){
       setTotalMovies([...totalMovies, ...mov]);
     }
+     // eslint-disable-next-line react-hooks/exhaustive-deps
   },[movies])
   useEffect(()=>{
     if(searchText){
