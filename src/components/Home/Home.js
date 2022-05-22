@@ -23,7 +23,7 @@ console.log(searchText);
             dispatch(addMovies(res?.data));
         };
         
-        while(page<8) {
+        while(page<5) {
             fetchMovies();
         page=page+1;
     }
